@@ -1,4 +1,4 @@
-# Pace MarineSolution
+# Pace Marine Solutions
 
 A modern, responsive shipping website built with React, Vite, and TailwindCSS. The website features smooth animations, a cool shipping-themed loader, and comprehensive information about maritime services.
 
