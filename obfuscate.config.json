@@ -1,0 +1,20 @@
+{
+  "compact": true,
+  "controlFlowFlattening": true,
+  "inputFileName": "public/js/protect.js",
+  "outputFileName": "public/js-obfuscated/protect.js",
+  "controlFlowFlatteningThreshold": 0.75,
+  "numbersToExpressions": true,
+  "simplify": true,
+  "stringArray": true,
+  "stringArrayThreshold": 0.75,
+  "deadCodeInjection": true,
+  "deadCodeInjectionThreshold": 0.4,
+  "debugProtection": true,
+  "debugProtectionInterval": 2000,
+  "disableConsoleOutput": true,
+  "rotateStringArray": true,
+  "selfDefending": true,
+  "splitStrings": true,
+  "splitStringsChunkLength": 10
+}

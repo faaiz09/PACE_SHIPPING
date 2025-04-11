@@ -250,7 +250,7 @@ const ScrollToTop = ({
                     : {}
                 }
               >
-                <ArrowUp className="h-6 w-6 text-blue drop-shadow-md transform transition-transform group-hover:translate-y-px" />
+                <ArrowUp className="h-6 w-6 text-white drop-shadow-md transform transition-transform group-hover:translate-y-px" />
               </motion.div>
             </button>
           </div>

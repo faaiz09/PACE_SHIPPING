@@ -251,7 +251,7 @@ const Home = () => {
         {/* Add ScrollToTop component here */}
         <ScrollToTop 
           showBelow={300}
-          fillColor="#0C6291" // or any color that matches your theme
+          fillColor="#5995ED" // or any color that matches your theme
         />
         
         {/* Hero Section with Carousel */}

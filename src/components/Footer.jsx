@@ -2,16 +2,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { GiShipWheel } from 'react-icons/gi';
+import { useState } from 'react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  // Replace currentYear declaration with:
+  const [currentYear] = useState(() => new Date().getFullYear());
 
   const footerLinks = {
     company: [
       { path: '/about', label: 'About Us' },
       { path: '/careers', label: 'Careers' },
       { path: '/contact', label: 'Contact' },
-      { path: '/blogs', label: 'Blogs' },
+      { path: '/gallery', label: 'Gallery' },
     ],
     services: [
       { path: '/services#terminal', label: 'Terminal Consulting' },
@@ -49,7 +51,10 @@ const Footer = () => {
               <img 
                 src="/images/Pacemarinelogo.png" 
                 alt="Pace Marine Solutions Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"  // Changed from h-12 to h-16
+                loading="lazy"
+                width="200"     // Increased from 150 to 200
+                height="64"     // Increased from 48 to 64
               />
             </Link>
             <p className="text-white/70">
@@ -61,7 +66,7 @@ const Footer = () => {
                   key={index}
                   href={social.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"  // Added nofollow for SEO security
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="text-white/70 hover:text-accent transition-colors duration-300"
@@ -139,6 +144,7 @@ const Footer = () => {
                   <Link
                     to={link.path}
                     className="text-white/70 hover:text-accent transition-colors duration-300"
+                    onClick={() => window.gtag?.('event', 'footer_navigation', { link: link.path })}
                   >
                     {link.label}
                   </Link>
@@ -162,4 +168,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

@@ -22,7 +22,7 @@ A modern, responsive shipping website built with React, Vite, and TailwindCSS. T
 - Our Network
 - Contact Us
 - Careers
-- Blogs
+- Gallery
 - Share File
 - Services
   - Terminal Consulting
