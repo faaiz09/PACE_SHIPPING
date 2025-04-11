@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-dark;
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+} 
